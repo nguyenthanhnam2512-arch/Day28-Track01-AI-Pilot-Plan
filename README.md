@@ -1,6 +1,6 @@
 > **Repo:** https://github.com/VinUni-AI20k/Day28-Track01-AI-Pilot-Plan
 
-# Day 28 — AI20k Learning OS: từ một Big Ask quá lớn → một AI Pilot Plan đủ để quyết
+# Day 28 — AI20k Learning OS: từ một bài toán mơ hồ → một AI Pilot Plan đủ để quyết
 
 Day 28 có **1 lab lớn theo nhóm 3** (~70 phút), chạy trọn một vòng triển khai AI trên một đề bài thật trong chính khóa AI20k:
 
