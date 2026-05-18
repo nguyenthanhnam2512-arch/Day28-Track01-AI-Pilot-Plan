@@ -1,5 +1,18 @@
 > **Repo:** https://github.com/VinUni-AI20k/Day28-Track01-AI-Pilot-Plan
 
+# Day 28 — Nhóm Track01
+
+## Thành viên
+- Hoàng Kim Trí Thành (2A202600372) · Quách Gia Được (2A202600423) · Nguyễn Thành Nam (2A202600205)
+- Track: Track 1 — Lộ trình học cá nhân hóa
+
+## Bản nộp
+- 🎯 [Problem Framing](./worksheet/01-frame/3-FINAL-problem-framing.md)
+- 🎯 [Solution + bản vẽ](./worksheet/02-solution/2-FINAL-solution.md)
+- 🎯 [5-slide Pitch + AI Support Log](./worksheet/03-pilot-plan/2-FINAL-pitch.md)
+
+---
+
 # Day 28 — AI20k Learning OS: từ một bài toán mơ hồ → một AI Pilot Plan đủ để quyết
 
 Day 28 có **1 lab lớn theo nhóm 3** (~70 phút), chạy trọn một vòng triển khai AI trên một đề bài thật trong chính khóa AI20k:
