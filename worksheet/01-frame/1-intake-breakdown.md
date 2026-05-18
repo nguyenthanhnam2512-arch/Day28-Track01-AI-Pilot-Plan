@@ -31,48 +31,46 @@ Quy tắc: **nghe trước, tách trước, chưa chọn.** Bước này không 
 
 ## Phần A — Phát biểu lại Big Ask bằng lời nhóm
 
-Đừng chép lại đề. Cả nhóm nói lại "công cụ lớn stakeholder muốn" bằng lời mình. Nếu 3 người nói 3 kiểu khác nhau → chưa hiểu giống nhau, bàn thêm.
-
-Câu hỏi phụ (tự trả lời):
-
-- Stakeholder nói họ muốn gì, và họ thực sự *cần* gì — có khác nhau không?
-- "Tại sao bây giờ?" — ở quy mô ~500 người, cái gì đang đau khiến phải làm công cụ này lúc này?
-- Ai là người dùng đầu tiên thật sự, không phải "cả khóa"?
-
 ### Trả lời
 
-- **Big Ask, viết lại bằng lời nhóm (2–3 câu)**: [...]
-- **Tại sao bây giờ**: [...]
-- **Người dùng đầu tiên cụ thể**: [...]
+- **Big Ask, viết lại bằng lời nhóm (2–3 câu)**:
+  Lãnh đạo AI20k muốn xây một hệ thống AI giúp mỗi học viên trong ~500 người có lộ trình học riêng — thay vì tất cả đi theo cùng một đường. Hệ thống này cần "biết" học viên đang ở đâu (level, điểm yếu, mục tiêu nghề nghiệp) và từ đó tự gợi ý bước tiếp theo phù hợp.
+  Stakeholder nói "cá nhân hóa lộ trình" — nhưng điều họ thực sự cần là: học viên biết mình cần làm gì tiếp theo vào đúng thời điểm, không phải một trang dashboard phức tạp.
 
-## Phần B — Tách công cụ lớn thành 5–8 use case
+- **Tại sao bây giờ**:
+  AI20k vừa vào giai đoạn D28 — cửa ngõ trước 6 tuần thực chiến. Học viên có background rất khác nhau (PM, founder, engineer, operator) nhưng đang nhận cùng một lộ trình. Ở quy mô ~500 người, coach không thể nói chuyện 1-1 với từng người để hỏi "bạn đang yếu chỗ nào". Đây là khoảnh khắc đau nhất và cũng có dữ liệu sẵn nhất (bài nộp D28, quiz, rubric).
 
-Nhìn mục **Big Vision Modules** trong track card. Mỗi dòng = 1 use case làm được riêng, viết dạng *"AI làm X cho ai để họ Y"* — không phải tính năng mơ hồ. Cần 5–8 dòng (ít hơn 5 = chưa tách đủ; nhiều hơn 8 = đang liệt kê vụn).
+- **Người dùng đầu tiên cụ thể**:
+  Học viên track Product (~80 người) vừa nộp bài D28, đang không biết nên ôn lại phần nào trước khi bước vào 6 tuần thực chiến — không phải "cả khóa 500 người".
+
+---
+
+## Phần B — Tách công cụ lớn thành 6 use case
 
 | # | Use case (AI làm gì · cho ai · để họ làm được gì) | Người dùng | Làm được độc lập? |
 |---|---|---|---|
-| 1 | | | Có / Không — phụ thuộc # |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
+| 1 | AI phân tích quiz đầu khóa + bài nộp đầu tiên → sinh báo cáo "bạn đang ở level nào, mục tiêu nào phù hợp" cho học viên để chọn track ngay từ đầu | Học viên (mới vào khóa) | **Có** |
+| 2 | AI đọc mục tiêu nghề nghiệp học viên (PM/founder/engineer/operator) + kết quả quiz → sinh lộ trình học cá nhân hóa gồm thứ tự ưu tiên các ngày/module nên tập trung | Học viên | **Có** |
+| 3 | AI phân tích bài nộp D28 của học viên (đối chiếu rubric 5 Gate) → sinh checklist điểm yếu cá nhân + gợi ý 3 tài liệu cần xem lại trước 6 tuần thực chiến | Học viên (đã nộp D28) | **Có** |
+| 4 | AI theo dõi tiến độ học viên theo concept xuyên suốt khóa (D1–D28) → hiển thị "concept X bạn gặp 3 lần nhưng còn sai" để học viên biết chỗ nào chưa vững | Học viên | Không — phụ thuộc #1 (cần profile đầu khóa) |
+| 5 | AI phân tích câu hỏi + điểm yếu của học viên → gợi ý 2–3 peer có điểm mạnh bổ sung để ghép cặp hỗ trợ nhau trong 6 tuần thực chiến | Học viên, Coach | Không — phụ thuộc #3 (cần biết điểm yếu trước) |
+| 6 | AI tổng hợp dữ liệu toàn track → sinh view cho coach: danh sách học viên cần can thiệp (sai nhiều concept quan trọng, không có dấu hiệu tự ôn) kèm gợi ý hành động cụ thể | Coach | Không — phụ thuộc #3 (cần checklist điểm yếu đã có) |
 
-Cần ít nhất **4 use case thật sự độc lập** (làm được mà không cần cái khác xong trước). Nếu nhiều cái phụ thuộc nhau → gộp hoặc viết lại cho tách bạch.
+**Kiểm tra độc lập**: Use case 1, 2, 3 làm được riêng lẻ → ≥3 use case độc lập. Use case 4, 5, 6 phụ thuộc nhau hoặc phụ thuộc #3, nhưng #3 khi chạy xong sẽ mở ra cả 3 cái sau.
 
 ---
 
 ## Phát hiện ban đầu
 
-- [...]
-- [...]
+- Use case 3 (phân tích bài D28 → checklist điểm yếu) là **hinge point**: nếu làm được UC3, UC4/5/6 đều có thể build thêm dựa trên dữ liệu của nó.
+- UC1 (chẩn đoán đầu khóa) và UC2 (lộ trình tổng) rất rộng — cần nhiều tháng để đo "có học tốt hơn không". Không phù hợp cho pilot 2 tuần.
+- Dữ liệu sẵn có ngay bây giờ: bài nộp D28 + rubric 5 Gate + danh sách tài liệu khóa — đủ để chạy UC3 ngay.
 
 ## Câu hỏi mở (mang sang bước chọn Quick Win)
 
-- [...]
-- [...]
+- UC3 cần bao nhiêu bài nộp để prompt đủ tốt? 5 bài có đủ để calibrate không?
+- Coach có thực sự sẵn lòng review checklist AI trước khi gửi học viên, hay sẽ bỏ qua?
+- Nếu học viên nhận checklist nhưng không làm theo — làm sao biết tool này có giá trị?
 
 ---
 
@@ -80,10 +78,10 @@ Cần ít nhất **4 use case thật sự độc lập** (làm được mà khô
 
 | Hạng mục | Xong? |
 |---|---|
-| Cả nhóm phát biểu lại Big Ask giống nhau, không cần nhìn card | / |
-| Có 5–8 use case dạng "AI làm X cho ai để Y" | / |
-| Có ≥4 use case thật sự độc lập | / |
-| Nhóm KHÔNG còn ý định pitch "build cả platform" | / |
+| Cả nhóm phát biểu lại Big Ask giống nhau, không cần nhìn card | ✅ |
+| Có 5–8 use case dạng "AI làm X cho ai để Y" | ✅ (6 use case) |
+| Có ≥4 use case thật sự độc lập | ✅ (UC1, UC2, UC3 độc lập; UC4/5/6 phụ thuộc UC3 nhưng UC3 độc lập) |
+| Nhóm KHÔNG còn ý định pitch "build cả platform" | ✅ |
 
 Sau bước này, mở `2-quick-win.md` — chấm điểm chọn 1 lát cắt làm trước.
 
